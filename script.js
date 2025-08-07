@@ -9,15 +9,11 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const section = document.querySelector(this.getAttribute('href'));
-    section.scrollIntoView({
-      behavior: 'smooth'
-    });
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
   });
 });
 
-// Placeholder form handler (you can replace this with real submission later)
-document.querySelector('.contact-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  alert("Thank you! Your message has been received.");
-  this.reset();
-});
