@@ -604,6 +604,34 @@ body {
   }
 }
 
+/* Side nav default hidden */
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100vh;
+  background-color: #111;
+  flex-direction: column;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.nav-links a {
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-links.active {
+  left: 0;
+}
+
+.logo {
+  cursor: pointer;
+}
 
 
 
