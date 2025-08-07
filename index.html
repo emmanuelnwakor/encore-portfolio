@@ -138,15 +138,14 @@
   </section>
 
   <!-- Contact -->
-<section id="contact" class="contact-section">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/mnnzopjv" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+<form action="https://formspree.io/f/mnnzopjv" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <input type="hidden" name="_redirect" value="https://emmanuelnwakor.github.io/encore-portfolio/#contact">
+
+  <button type="submit">Send Message</button>
+</form>
 
 <footer class="footer">
   <div class="footer-content">
@@ -167,4 +166,5 @@
 
 </body>
 </html>
+
 
