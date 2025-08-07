@@ -136,3 +136,13 @@ body { font-family: "Segoe UI", sans-serif; background-color: #f7f8fa; color: #1
 #side-nav.active {
   transform: translateX(0);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
