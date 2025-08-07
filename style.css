@@ -121,3 +121,18 @@ body { font-family: "Segoe UI", sans-serif; background-color: #f7f8fa; color: #1
 
 .social-icons a:hover { color: #00ccff; }
 
+#side-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* or whatever width you're using */
+  height: 100%;
+  background-color: #111; /* or your chosen background */
+  z-index: 9999; /* this brings it in front */
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+
+#side-nav.active {
+  transform: translateX(0);
+}
