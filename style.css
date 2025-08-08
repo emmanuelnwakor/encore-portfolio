@@ -538,3 +538,11 @@ html, body {
   overflow-x: hidden;
   width: 100%;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
+.white-section {
+  overflow-x: hidden; /* target the white background sections */
+}
