@@ -534,3 +534,7 @@ body {
   cursor: pointer;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
