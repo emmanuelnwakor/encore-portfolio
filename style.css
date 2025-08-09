@@ -4,11 +4,22 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f7f8fa;
   color: #111;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 .container {
@@ -32,6 +43,21 @@ body {
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 1.1rem;
 }
 
 .nav-links a {
@@ -39,6 +65,32 @@ body {
   text-decoration: none;
   color: white;
   font-weight: 500;
+}
+
+/* Side nav (hidden by default) */
+#side-nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100vh;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+#side-nav a {
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+#side-nav.active {
+  left: 0;
 }
 
 .btn {
@@ -122,11 +174,9 @@ body {
     flex-direction: column;
     text-align: center;
   }
-
   .hero-buttons {
     justify-content: center;
   }
-
   .hero-image img {
     margin-top: 20px;
   }
@@ -300,6 +350,7 @@ body {
 .icon-small:hover {
   transform: scale(1.2);
 }
+
 .contact {
   padding: 60px 20px;
   background-color: #f7f8fa;
@@ -351,6 +402,7 @@ body {
 .contact-form .btn:hover {
   background-color: #002d1a;
 }
+
 .footer {
   background-color: #111;
   padding: 20px 0;
@@ -380,6 +432,7 @@ body {
 .social-icons a:hover {
   color: #00ccff;
 }
+
 /* Sticky header styles */
 .header.sticky {
   position: fixed;
@@ -388,28 +441,11 @@ body {
   z-index: 999;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #fff; /* or your header text color */
-}
 
-.logo-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%; /* make it circular */
-  object-fit: cover;
-}
-
-.logo-text {
-  font-size: 1.1rem;
-}
+/* About section */
 .about {
   padding: 60px 20px;
-  background-color: #0f0f0f; /* match dark theme */
+  background-color: #0f0f0f;
   color: #fff;
 }
 
@@ -462,6 +498,8 @@ body {
 .about-content .btn:hover {
   background-color: #00c0cc;
 }
+
+/* Contact section */
 .contact-section {
   padding: 60px 20px;
   background-color: #111;
@@ -505,44 +543,19 @@ body {
 .contact-form button:hover {
   background-color: #0051ff;
 }
-/* Side nav default hidden */
-.nav-links {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 220px;
-  height: 100vh;
-  background-color: #111;
-  flex-direction: column;
-  padding-top: 60px;
-  transition: left 0.3s ease;
-  z-index: 999;
-}
+@media (min-width: 769px) {
+  /* Show nav links inline */
+  .nav-links {
+    display: flex;
+  }
 
-.nav-links a {
-  padding: 15px 20px;
-  color: white;
-  text-decoration: none;
-  display: block;
-}
+  /* Hide side nav */
+  #side-nav {
+    display: none;
+  }
 
-.nav-links.active {
-  left: 0;
-}
-
-.logo {
-  cursor: pointer;
-}
-
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-}
-
-html, body {
-  overflow-x: hidden;
-}
-
-.white-section {
-  overflow-x: hidden; /* target the white background sections */
+  /* Hide logo toggle button if it’s for mobile nav */
+  #logo-toggle {
+    display: none;
+  }
 }
