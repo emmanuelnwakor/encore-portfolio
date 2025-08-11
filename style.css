@@ -559,16 +559,3 @@ main {
     display: none;
   }
 }
-/* Remove unwanted horizontal scroll */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-/* Make sure all sections fit in the viewport */
-* {
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
