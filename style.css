@@ -555,7 +555,38 @@ main {
   }
 
   /* Hide logo toggle button if it’s for mobile nav */
+  /* Hidden by default */
+.mobile-menu-btn {
+    display: none;
+}
+
+/* Shown only on smaller screens */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;  /* shows the hamburger button */
+    }
+
+    nav ul {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%); /* hidden above screen */
+        transition: var(--transition);
+    }
+
+    nav ul.active {
+        transform: translateY(0); /* slides down when opened */
+    }
+}
+
   #logo-toggle {
     display: none;
   }
 }
+
