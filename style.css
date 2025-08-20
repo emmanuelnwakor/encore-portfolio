@@ -7,7 +7,6 @@
 html {
   scroll-behavior: smooth; /* Smooth scrolling */
 }
-
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f7f8fa;
@@ -589,3 +588,4 @@ main {
     display: none;
   }
 }
+
